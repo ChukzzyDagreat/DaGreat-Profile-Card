@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/about.css" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <article data-testid="test-about-container">
+      <header class="page_header" data-testid="test-page-header">
+        <h1 class="page-title">About</h1>
+        <nav
+          class="breadcrumb"
+          aria-label="Breadcrumb"
+          data-testid="test-breadcrumb"
+        >
+          <ul>
+            <li>
+              <a href="index.html" data-testid="test-card-home">Home</a>
+            </li>
+            <li>
+              <a href="Contact-Us.html" data-testid="test-card-about"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="container" data-testid="test-about-main">
+        <section class="my_info" data-testid="test-user-info">
+          <figure data-testid="test-avatar-container">
+            <img
+              src="assets/icon png img/me.png"
+              class="about_avatar"
+              alt="Profile photo of DaGreat"
+              data-testid="test-avatar"
+            />
+          </figure>
+
+          <div class="about_name">
+            <p class="my_fullName">Ochuko Great Akporue</p>
+            <p class="title">Frontend Developer</p>
+          </div>
+        </section>
+
+        <section class="about_bio" data-testid="test-about-bio">
+          <p class="bio_desc">
+            <span class="title">Bio</span><br />
+            Hello! I'm Ochuko Great Akporue (as you already know), a passionate
+            Frontend Developer dedicated to crafting engaging and user-friendly
+            web experiences. With a keen eye for design and a commitment to
+            clean code, I strive to bring ideas to life on the web. When I'm not
+            coding, you'll find me exploring color palettes, optimizing user
+            interfaces, or enjoying a good cup of coffee. Let's build something
+            amazing together!
+          </p>
+        </section>
+
+        <section class="about_goals" data-testid="test-about-goals">
+          <p class="goals_desc">
+            <span class="title">Goals</span><br />
+            My primary goal as a Frontend Developer is to create seamless and
+            accessible web applications that not only meet but exceed user
+            expectations. I aim to continuously enhance my skills in modern web
+            technologies, stay updated with industry trends, and contribute to
+            projects that make a positive impact. Ultimately, I aspire to be a
+            key player in building innovative digital experiences that inspire
+            and engage users worldwide.
+          </p>
+        </section>
+
+        <section class="about_confidence" data-testid="test-about-confidence">
+          <p class="confidence_desc">
+            <span class="title">Area Of Confidence</span>
+            <br />
+            I am particularly confident in my abilities with HTML, CSS, and
+            JavaScript, which form the backbone of web development. I have a
+            strong understanding of responsive design principles, ensuring that
+            websites look and function well across various devices and screen
+            sizes. Additionally, I am proficient in using frontend frameworks
+            like React.js to build dynamic and interactive user interfaces. My
+            attention to detail and commitment to writing clean, maintainable
+            code further enhance my confidence in delivering high-quality web
+            applications.
+          </p>
+        </section>
+        <section class="about_future" data-testid="test-about-future-note">
+          <p class="future_note_desc">
+            <span class="title">Note To Future Self</span><br />
+            Always stay curious and keep learning. The tech world is
+            ever-evolving, and to remain relevant, you must adapt and grow.
+            Embrace challenges as opportunities to improve your skills. Remember
+            to balance work with rest, and never lose sight of the passion that
+            brought you into this field. Keep pushing boundaries and striving
+            for excellence!
+          </p>
+        </section>
+
+        <section data-testid="test-about-extra">
+          <p class="extra_desc"></p>
+          <span class="title">Extra Thoughts</span>
+          <p class="extra_desc">
+            I hope this page effectively communicates who I am, what I stand
+            for, and where I aspire to go in my career. Thank you for taking the
+            time to learn more about me!
+          </p>
+        </section>
+      </main>
+    </article>
+
+    <footer class="site-footer">
+      <p>
+        &copy;Copy <span id="year"></span>
+        <span style="color: #ffa600">i</span>Frame
+      </p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="javascript/about.js"></script>
+  </body>
+</html>

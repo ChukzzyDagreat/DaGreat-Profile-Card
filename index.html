@@ -7,21 +7,21 @@
       content="width=device-width, initial-scale=1.0"
       data-testid="meta-viewport"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <title data-testid="page-title">Profile Card</title>
   </head>
 
   <body>
+    <section class="card_page_nav" data-testid="test-user-page_nav">
+      <h2 data-testid="test-home-button">Home</h2>
+      <a class="card-button" href="About-Me.html"><button class="card_btn" data-testid="test-about-button">About</button></a>
+      <a class="card-button" href="Contact-Us.html"><button class="card_btn" data-testid="test-contact-us-button">Contact Us</button></a>
+    </section>
     
     <article data-testid="test-profile-card" class="card" data-state="#about">
       <!-- profile loader screen components -->
       <div class="card_loader" data-testid="test-user-loader">
-        <img
-          src="./images/my-logo.png"
-          data-testid="test-user-logo"
-          alt="logo"
-        />
-        <p class="card_logoName" data-testid="test-user-company-name">INFINITE</p>
+        <p class="card_logoName" data-testid="test-user-company-name"><span style="color: #ffa600">i</span>Frame.</p>
       </div>
 
 
@@ -29,7 +29,7 @@
       <!-- profile card header section -->
       <section class="card_header" data-testid="test-user-profile-header">
         <img
-          src="/images/profile-bg-2..png"
+          src="/assets/images/profile-bg-2.png"
           class="card_avatar_cover"
           data-testid="test-user-avatar-background"
           alt="profile photo background"
@@ -37,7 +37,7 @@
 
         <figure data-testid="test-user-avatar-container">
           <img
-            src="/images/me.png"
+            src="assets/icon png img/me.png"
             class="card_avatar"
             alt="Profile photo of DaGreat"
             data-testid="test-user-avatar"
@@ -62,16 +62,16 @@
           <nav class="card_social" data-testid="test-user-social-links">
             <ul data-testid="test-user-social-list">
               <li data-testid="test-user-social-item" class="custom_btn"><a href="https://facebook.com/OchukoWarriPikin" target="_blank" data-testid="test-user-social-facebook" aria-label="Facebook profile"
-              ><img src="./images/facebook1.png" alt="Facebook"
+              ><img src="/assets/icon png img/facebook1.png" alt="Facebook"
             /></a></li>
               <li data-testid="test-user-social-item" class="custom_btn"><a href="" targe="_blank" data-testid="test-user-social-instergram" aria-label="Instergram profile"
-              ><img src="./images/instergram1.png" alt="Instergram" />
+              ><img src="/assets/icon png img/instergram1.png" alt="Instergram" />
             </a></li>
               <li data-testid="test-user-social-item" class="custom_btn"><a href="https://www.inkedin.com/feed/" target="_blank" data-testid="test-user-social-linkedin" aria-label="LinkedIn profile"
-              ><img src="./images/linkedin.png" alt="LinkedIn"
+              ><img src="/assets/icon png img/linkedin.png" alt="LinkedIn"
             /></a></li>
               <li data-testid="test-user-social-item" class="custom_btn"><a href="https://x.com/chukzzy_dagreat" target="_blank" data-testid="test-user-social-twitter" aria-label="Twitter profile"
-              ><img src="./images/twitter.png" alt="Twitter"
+              ><img src="/assets/icon png img/twitter.png" alt="Twitter"
             /></a></li>
             </ul>
           </nav>
@@ -116,30 +116,6 @@
            </div>
          </section>
 
-         <!-- Contact Section -->
-          <section class="card_section" data-testid="test-user-contact" id="contact">
-            <div class="card_content" data-testid="test-user-contact-content">
-              <div class="card_subtitle" data-testid="test-user-contact-subtitle">CONTACT</div>
-              <div class="card_contact_wrapper" data-testid="test-user-contact-wrapper">
-                <div class="card_contact" data-testid="test-user-contact-location">
-                  <img src="./images/location2.png" data-testid="test-user-location-icon" alt="location icon" />
-                   8, Ovwodo street, Oria-Abraka, Delta State, Nigeria.
-                </div>
-
-                <div class="card_contact" data-testid="test-user-contact-phone">
-                  <img src="./images/phone.png" data-testid="test-user-phone-icon" alt="phone icon" />
-                   (+234)9031789469
-                </div>
-
-                <div class="card_contact" data-testid="test-user-contact-email">
-                  <img src="./images/mail.png" data-testid="test-user-mail-icon" alt="mail icon" /> 
-                  ochukoakporue@gmail.com
-              </div>
-
-              <button class="contact_me" data-testid="test-user-work-together">WORK TOGETHER</button>
-            </div>
-          </section>
-
 
          <!-- Profile card navigation buttons -->
         <div class="card_buttons" data-testid="test-user-navigation-buttons">
@@ -155,13 +131,23 @@
           </button>
           <button data-section="#dislikes" data-testid="test-user-button-dislikes"  tabindex="0" >
             DISLIKES </button>
-            <button data-section="#contact" data-testid="test-user-button-contact"  tabindex="0" >
-            CONTACT </button>
+
          
         </div>
       </section>
     </article>
 
-    <script src="script.js" data-testid="script"></script>
+    
+
+    <footer aria-details="test-user-footer">
+      <p data-testid="test-user-copy">&copy;Copy <span id="year"></span> <span style="color: #ffa600;">i</span>Frame.</p>
+    </footer>
+
+    
+      <script>
+    // small helper for footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+    <script src="javascript/main.js" data-testid="script"></script>
   </body>
 </html>

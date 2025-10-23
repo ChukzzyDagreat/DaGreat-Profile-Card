@@ -5,7 +5,7 @@
 body {
   color: #2b2c48;
   font-family: "poppins", Courier, monospace;
-  background: url(./images/bg.jpg);
+  background: url("/assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -13,7 +13,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  flex-direction: column;
+  padding: 0;
 }
 
 .card_loader {
@@ -160,6 +161,9 @@ section[data-testid="test-user-profile-header"] * {
   transform: translateX(-50%) translateY(-50%);
   background: linear-gradient(45deg, #bf00ff69, #5900ff69);
 }
+.card_avatar:hover {
+  transform: translateX(-50%) translateY(-50%) scale(1.07);
+}
 
 .card_fullname {
   position: absolute;
@@ -260,11 +264,11 @@ nav.card_social ul li img {
   transition: 0.3s;
   opacity: 0.4;
 }
-nav.card_social ul li img[src="./images/linkedin.png"] {
+nav.card_social ul li img[src="assets/icon png img/linkedin.png"] {
   width: 30px;
 }
 nav.card_social ul li a {
-  color: #8797a1;
+  color: #c47afd;
   height: 32px;
   width: 32px;
   border-radius: 50%;
@@ -272,15 +276,17 @@ nav.card_social ul li a {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-  background-color: rgba(93, 133, 193, 0.05);
+  background-color: rgba(162, 108, 244, 0.1);
   margin-right: 10px;
 }
 nav.card_social ul li a:focus,
 nav.card_social ul li a:hover {
   border: 1px solid #8a84ff;
+  transform: translateY(-5px);
+  opacity: 0.8;
 }
 nav.card_social ul li a:hover img {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 nav.card_social ul li a:last-child {
@@ -399,50 +405,6 @@ nav.card_social ul li a:last-child {
   height: 500px;
 }
 
-/* Contact me page display and layouts */
-.card_contact_wrapper {
-  margin-top: 20px;
-}
-.card_contact {
-  display: flex;
-  alignment-baseline: center;
-  font-size: 13px;
-  color: #6e6e7b;
-  line-height: 1.6;
-  cursor: pointer;
-}
-.card_contact + .card_contact {
-  margin-top: 16px;
-}
-.card_contact img {
-  width: 2.5em;
-  height: 1.5em;
-  margin-right: 12px;
-  transition: 0.3s;
-  filter: invert(40%);
-  padding-right: 12px;
-  border-right: 1px solid #dfe2ee;
-}
-.contact_me {
-  border: 0;
-  outline: none;
-  background: linear-gradient(
-    to right,
-    rgba(93, 200, 239, 0.8) 0%,
-    rgba(81, 106, 204, 0.9) 100%
-  );
-  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.15);
-  color: #fff;
-  padding: 12px 16px;
-  width: 100%;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 25px;
-  transition: 0.3s;
-}
-
 /* When classList "is_active" is triggered */
 .card.is_active .card_header {
   height: 80px;
@@ -474,6 +436,101 @@ nav.card_social ul li a:last-child {
   bottom: 16px;
   letter-spacing: 1px;
   font-size: 10px;
+}
+
+/* Contact us button styles and layout */
+.card_page_nav {
+  width: 95%;
+  max-width: 45em;
+  height: 4em;
+  margin: auto;
+  margin-bottom: 2em;
+  position: relative;
+  align-items: center;
+justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(
+    45deg,
+    rgba(81, 0, 255, 0.2),
+    rgba(250, 117, 255, 0.2)
+  );
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.card_page_navv h2{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: auto;
+  padding: 0.2em 0;
+}
+
+a.card-button .card_btn {
+  flex: 0 0 auto;
+  font-size: 15px;
+  width: 6em;
+  height: 2.4em;
+  border: 1px solid #ffffff62;
+  border-radius: 7px;
+  -moz-user-select: none;
+  user-select: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  filter: saturate(0.5);
+  box-shadow: 0px 5px 10px rgba(207, 207, 207, 0.159);
+  background: linear-gradient(
+    45deg,
+    rgba(81, 122, 255, 0.5),
+    rgba(250, 117, 255, 0.6)
+  );
+  overflow: hidden;
+}
+.card_btn:hover {
+  box-shadow: 0px 5px 10px rgba(247, 0, 255, 0.427);
+  transform: translateY(-5px);
+  filter: saturate(1);
+  position: relative;
+}
+.card_btn::before {
+  content: "";
+  width: 40%;
+  height: 400%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ffffff30;
+  transform: skewX(-45deg) translate(-50%);
+  animation: glowmove2 0.3s linear forwards;
+  -webkit-animation: glowmove2 0.3s linear forwards;
+  z-index: -1;
+}
+@keyframes glowmove2 {
+  from {
+    transform: skewX(-45deg) translate(600%);
+  }
+  to {
+    transform: skewX(-45deg) translate(-50%);
+  }
+}
+.card_btn:hover::before {
+  animation: glowmove 0.3s linear forwards;
+  -webkit-animation: glowmove 0.3s linear forwards;
+}
+@keyframes glowmove {
+  to {
+    transform: skewX(-45deg) translate(600%);
+  }
+}
+/* Footer styling and display */
+footer {
+  width: 100%;
+  height: 5em;
+  background: transparent;
+  text-align: center;
+  color: #fff;
 }
 
 /* Device responsiveness layouts */
@@ -517,6 +574,11 @@ nav.card_social ul li a:last-child {
   .card_hobby_list li,
   .card_dislike_list li {
     font-size: 13px;
+  }
+  a.card-button .card_btn {
+    width: 10em;
+    height: 2.8em;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 920px) {

@@ -50,3 +50,6 @@ const handleButtonClick = (e) => {
 buttons.forEach((btn) => {
   btn.addEventListener('click', handleButtonClick);
 });
+
+//footer current year display
+document.getElementById('year').textContent = new Date().getFullYear();
