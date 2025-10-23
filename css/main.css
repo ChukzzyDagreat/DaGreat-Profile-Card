@@ -5,7 +5,7 @@
 body {
   color: #2b2c48;
   font-family: "poppins", Courier, monospace;
-  background: url("/assets/images/bg.jpg");
+  background: url("../assets/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
