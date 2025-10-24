@@ -6,8 +6,7 @@
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial;
-  background: url("../assets/images/profile-bg.jpg"),
-    rgb(0, 0, 0, 0.5) no-repeat;
+  background: url("../assets/images/profileBg.jpg"), rgb(0, 0, 0, 0.5) no-repeat;
   background-blend-mode: darken;
   background-size: cover;
   background-position: center top;
