@@ -23,7 +23,7 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 5;
   background: linear-gradient(
     45deg,
     rgba(187, 0, 255, 0.4),
@@ -78,9 +78,9 @@ article {
   max-width: 45em;
   width: 90%;
   margin: auto;
+  margin-top: 7em;
   overflow-y: auto;
   position: relative;
-  z-index: 1;
   overflow-x: hidden;
   background: #fff;
   display: flex;
@@ -445,7 +445,11 @@ nav.card_social ul li a:last-child {
   height: 4em;
   margin: auto;
   margin-bottom: 2em;
-  position: relative;
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2em;
   align-items: center;
   justify-content: space-evenly;
   display: flex;
@@ -458,6 +462,7 @@ nav.card_social ul li a:last-child {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  z-index: 1;
 }
 .card_page_navv h2 {
   color: #fff;
