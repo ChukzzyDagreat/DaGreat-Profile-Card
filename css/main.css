@@ -447,7 +447,7 @@ nav.card_social ul li a:last-child {
   margin-bottom: 2em;
   position: relative;
   align-items: center;
-justify-content: space-evenly;
+  justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
   background: linear-gradient(
@@ -459,7 +459,7 @@ justify-content: space-evenly;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-.card_page_navv h2{
+.card_page_navv h2 {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
