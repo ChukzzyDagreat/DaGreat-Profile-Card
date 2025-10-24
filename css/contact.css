@@ -147,11 +147,15 @@ article.card {
   font-size: 1.1rem;
   color: #d3d3d3;
 }
-.container .contact_desc img {
-  width: 70%;
+.container .contact_desc .avatar {
+  width: 250px;
+  height: 250px;
   filter: drop-shadow(0 1px 20px #0099ff6a);
   animation: imageFloat 2s ease infinite;
   -webkit-animation: imageFloat 2s ease infinite;
+  background: url(../assets/icons/contactUs.png) no-repeat center;
+  background-size: cover;
+  margin: auto;
 }
 @keyframes imageFloat {
   0% {
