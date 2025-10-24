@@ -458,6 +458,7 @@ nav.card_social ul li a:last-child {
     45deg,
     rgba(81, 0, 255, 0.2),
     rgba(250, 117, 255, 0.2)
+    z-index: 1;
   );
   border-radius: 10px;
   backdrop-filter: blur(10px);
